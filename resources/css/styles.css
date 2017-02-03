@@ -1,0 +1,203 @@
+* {
+	box-sizing: border-box;
+}
+
+@font-face {
+     font-family: "Minecraft";
+     src: url("../fonts/Minecraft.ttf") format("truetype");
+     font-weight: normal;
+     font-style: normal;
+}
+
+body {
+	background-color: #D8EA93;
+}
+
+img {
+    height: 15px;
+    width: auto;
+}
+
+.container {
+	margin: 0 auto;
+}
+
+#picture {
+	background-color: white;
+	display: block;
+	margin: 0 auto;
+	-webkit-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.75);
+	box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.75);
+}
+
+#preview {
+    display: inline-block;
+    vertical-align: center;
+}
+
+h1 {
+	text-align: center;
+	color: #5C2121;
+    font-size: 4em;
+    margin: 0 0 10px 0;
+    letter-spacing: 5px;
+}
+
+ul {
+	text-align: left;
+	list-style: none;
+}
+
+#controls {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1000px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+nav {
+    margin: 20px auto;
+}
+
+label {
+	color: #2980B9;
+	font-weight: bold;
+	text-shadow: none;
+}
+
+#palette-panel {
+    max-width: 50%;
+    margin: 20px auto 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+#palette:hover {
+    cursor: crosshair;
+}
+
+#range , #formRange {
+    vertical-align: bottom;
+}
+
+.red {
+    color: #B9121B;
+}
+
+.blue {
+    color: #0378A6;
+}
+
+.white {
+    color: white;
+}
+
+.yellow {
+    color: #FFBD07;
+}
+
+.green {
+    color: #13B813;
+}
+
+
+/********************** COULEURS DE CRAYON PREDEFINIES **********************/
+
+.pen-color
+{
+    /* structure */
+    display: inline-block;
+    height: 2em;
+    position: relative;
+    top: 0.5em;
+    width: 2em;
+
+    /* presentation */
+    border-radius: 2em;
+}
+.pen-color.black
+{
+    background-color: black;
+}
+.pen-color.blue
+{
+    background-color: #0378A6;
+}
+.pen-color.green
+{
+    background-color: #13B813;
+}
+.pen-color.maroon
+{
+    background-color: #5C2121;
+}
+.pen-color.red
+{
+    background-color: #B9121B;
+}
+.pen-color.seagreen
+{
+    background-color: #029E9A;
+}
+.pen-color.yellow
+{
+    background-color: #FFBD07;
+}
+
+.pen-color + .pen-color
+{
+    margin-left: 0.2em;
+}
+
+/********************** BARRE D'OUTILS **********************/
+
+.toolbar ul
+{
+    /* structure */
+    padding-left: 0;
+
+    /* presentation */
+    list-style-type: none;
+
+    margin: 0;
+}
+.toolbar ul li
+{
+    margin-bottom: 0.5em;
+}
+.toolbar ul li label
+{
+    /* structure */
+    display: inline-block;
+    width: 100px;
+
+    /* presentation */
+    color: #2980B9;
+    font-weight: bold;
+}
+
+#preview {
+    margin-left: 170px;
+    background-color: black;
+    position: relative;
+    top: 10px;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+}
+
+.favorite-color {
+    background-color: white;
+}
+
+.erase-favorite-color {
+    width: 30px;
+}
+
+#tool-bucket img{
+    margin: 0;
+    padding: 0;
+}
