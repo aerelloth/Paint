@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8">
+	<title>Paint</title>
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" />
+	<link rel="stylesheet" href="resources/css/styles.css">
+    <link rel="shortcut icon" type="image/x-icon" href="resources/images/brush-icon.png" />
+</head>
+<body>
+	<h1><span class="red">P</span><span class="blue">A</span><span class="white">I</span><span class="yellow">N</span><span class="green">T</span> !</h1>
+	<div class="container">
+		<canvas id="picture" width="640" height="480"></canvas>
+	</div>
+    <div id="controls">
+    	<nav class="toolbar">
+            <ul>
+                <li>
+                    <label>Outils</label>
+                    <button id="tool-bucket" title="Seau"><img src="resources/images/Paint_Bucket-small.png" alt=""></button>
+                    <button id="tool-brush" title="Pinceau"><i class="fa fa-paint-brush"></i></button>
+                    <button id="tool-pencil" title="Crayon"><i class="fa fa-pencil"></i></button>
+                    <button id="tool-eraser" title="Effacer"><i class="fa fa-eraser"></i></button>
+                    <!--<button id="tool-color-picker" title="Pipette"><i class="fa fa-eyedropper"></i></button>-->
+                    <canvas id="preview" width="30" height="30"></canvas>
+                </li>
+                <li>
+                    <label>Formes</label>
+                    <button id="tool-line" title="Ligne">/</button>
+                    <button id="tool-circle" title="cercle"><i class="fa fa-circle-o"></i></button>
+                    <button id="tool-circle-full" title="disque"><i class="fa fa-circle"></i></button>
+                    <button id="tool-square" title="carré"><i class="fa fa-square-o"></i></button>
+                    <button id="tool-square-full" title="carré plein"><i class="fa fa-square"></i></button>
+                    <button id="tool-star" title="étoile"><i class="fa fa-star-o"></i></button>
+                    <button id="tool-star-full" title="étoile pleine"><i class="fa fa-star"></i></button>
+                </li>
+                <li>
+                    <label>Taille des formes</label><input id="formRange" type="range" min="1" max="100" value="10" />
+                </li>
+                <li>
+                    <label>Couleur</label>
+                    <div class="pen-color black" data-color="black"></div>
+                    <div class="pen-color maroon" data-color="#5C2121"></div>
+                    <div class="pen-color red" data-color="#B9121B"></div>
+                    <div class="pen-color yellow" data-color="#FFBD07"></div>
+                    <div class="pen-color green" data-color="#13B813"></div>
+                    <div class="pen-color seagreen" data-color="#029E9A"></div>
+                    <div class="pen-color blue" data-color="#0378A6"></div>
+                </li>
+                <li>
+                    <label>Mes couleurs</label>
+                    <canvas id="color1" width="30" height="30" class="favorite-color"></canvas>
+                    <canvas id="color2" width="30" height="30" class="favorite-color"></canvas>
+                    <canvas id="color3" width="30" height="30" class="favorite-color"></canvas>
+                    <canvas id="color4" width="30" height="30" class="favorite-color"></canvas>
+                    <canvas id="color5" width="30" height="30" class="favorite-color"></canvas>
+                    <canvas id="color6" width="30" height="30" class="favorite-color"></canvas>
+                    <canvas id="color7" width="30" height="30" class="favorite-color"></canvas>
+                </li>
+                <li>
+                    <label>Effacer</label>
+                    <button class="erase-favorite-color" data-color="1">x</button>
+                    <button class="erase-favorite-color" data-color="2">x</button>
+                    <button class="erase-favorite-color" data-color="3">x</button>
+                    <button class="erase-favorite-color" data-color="4">x</button>
+                    <button class="erase-favorite-color" data-color="5">x</button>
+                    <button class="erase-favorite-color" data-color="6">x</button>
+                    <button class="erase-favorite-color" data-color="7">x</button>
+                </li>
+                <li>
+                    <label>Epaisseur</label>
+                    <button class="pen-size" data-size="1">Fin</button>
+                    <button class="pen-size" data-size="2">Normal</button>
+                    <button class="pen-size" data-size="5">Epais</button>
+                    <input id="range" type="range" min="1" max="20" value="1" />
+                </li>
+                <li>
+                    <label>Nouvelle toile</label>
+                    <button id="tool-clear-canvas" title="Effacer tout">X</button>
+                </li>
+            </ul>
+        </nav>
+        <div id="palette-panel">
+            <canvas id="palette" width="300" height="300"></canvas>
+        </div>
+    </div>
+	<script src="resources/javascript/general-functions.js"></script>
+	<script src="resources/javascript/jquery.min.js"></script>
+	<script src="resources/javascript/main-script.js"></script>
+</body>
+</html>
